@@ -81,4 +81,4 @@ MIT © [Kosteron]()
 
 ![conkyrc-calendar](conky_calendar/conkyrc-calendar.png)
 ![conkyrc-weather](conky_weather/conkyrc-weather.png)
-![conkyrc-weather_alt](conky_calendar/conkyrc-weather_alt.png)
+![conkyrc-weather_alt](conky_calendar/conkyrc-weather-alt.png)
