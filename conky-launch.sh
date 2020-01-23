@@ -3,16 +3,16 @@
 killall conky
 
 # Start computer monitoring widget (based on Mainte conky script)
-conky -c $HOME/.conky/Mainte/conkyrc-dark-bspwm &
+conky -c $HOME/.conky/conky_computer_monitor/conkyrc-dark-bspwm &
 sleep 0.8
-conky -c $HOME/.conky/Mainte/conkyrc-dark-bg &
+conky -c $HOME/.conky/conky_computer_monitor/conkyrc-dark-bg &
 
 # start weather widget
 sleep 0.8
-bash $HOME/.conky/Mainte/weather-pull.sh &
+bash $HOME/.conky/conky_weather/weather-pull.sh &
 sleep 1
-conky -c $HOME/.conky/Mainte/conkyrc-weather &
+conky -c $HOME/.conky/conky_weather/conkyrc-weather &
 
 # start calendar widget
 sleep 0.8
-conky -c $HOME/.conky/Mainte/conkyrc-calendar &
+conky -c $HOME/.conky/conky_calendar/conkyrc-calendar &
