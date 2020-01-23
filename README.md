@@ -14,9 +14,9 @@ I really liked the design work provided by gvoze32 with the Mainte theme (See [h
 ## Features
 Actually the gadgets can do :
 
-- Show and Monitor computer metric like fan speed, processor use etc... (
-- Show local weather
-- Show a little calendar
+- Show and Monitor computer metric like fan speed, processor use etc... (Use the awesome conky theme Mainte)
+- Show local weather (Use the awesome http://wttr.in/ to show the local weather)
+- Show a little calendar (based on **cal**)
 
 ## Installation
 
@@ -73,6 +73,8 @@ Many thanks to :
 - **gvoze32**, which inspired me, and from which I took the graphic design for the other conky's widgets
 	- [Reddit Thread](https://www.reddit.com/r/unixporn/comments/e49pgl/oc_mainte_a_simple_and_functional_conky_theme/)
 	- [Github repository](https://github.com/gvoze32/Mainte)
+- **Igor chubin**
+	- [Github repository](https://github.com/chubin/wttr.in)
 
 ## License
 MIT © [Kosteron]()
