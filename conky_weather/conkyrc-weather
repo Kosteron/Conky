@@ -3,7 +3,7 @@ conky.config = {
     font = 'FuraCode Nerd Font:pixelsize=9',
     use_xft = true,
     xftalpha = 1.0,
-    update_interval = 1,
+    update_interval = 4,
     total_run_times = 0,
     own_window = true,
     own_window_transparent = true,
@@ -29,6 +29,13 @@ conky.config = {
     use_spacer = 'none',
     uppercase = true,
     text_buffer_size = 512,
+    no_buffers = true,
+    cpu_avg_samples = 2,
+    net_avg_samples = 2,
+    use_spacer = 'none',
+    maximum_width = 1024,
+    minimum_height = 640,
+    uppercase = true,
 };
 
 conky.text = [[

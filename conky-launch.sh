@@ -3,9 +3,9 @@
 killall conky
 
 # Start computer monitoring widget (based on Mainte conky script)
-conky -c $HOME/.conky/conky_computer_monitor/conkyrc-dark-bspwm &
+conky -c $HOME/.conky/conky_computer_monitor/conkyrc-computer-metrics &
 sleep 0.8
-conky -c $HOME/.conky/conky_computer_monitor/conkyrc-dark-bg &
+conky -c $HOME/.conky/conky_computer_monitor/conkyrc-exploded-view &
 
 # start weather widget
 sleep 0.8
