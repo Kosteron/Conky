@@ -76,9 +76,3 @@ Many thanks to :
 
 ## License
 MIT © [Kosteron]()
-
-## Screenshot
-
-![conkyrc-calendar](conky_calendar/conkyrc-calendar.png)
-![conkyrc-weather](conky_weather/conkyrc-weather.png)
-![conkyrc-weather_alt](conky_weather/conkyrc-weather-alt.png)
