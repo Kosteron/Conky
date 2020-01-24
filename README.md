@@ -31,6 +31,8 @@ sudo pacman -S conky
 you may want to install this optionnal package :
  - calendar (required by conkyrc-calendar)
  - mocp (required by conkyrc-mini-moc-player)
+ - ffmpeg (required by conkyrc-mini-moc-player to fetching the album picture)
+ - fortune-mod (required by conkyrc-fortune)
 
 **2.** Clone this repository
 ```bash
@@ -84,7 +86,7 @@ You can find more parameter and option on the wttr.in [Github repository](https:
 Many thanks to :
 
 - [Vector](https://www.reddit.com/r/thinkpad/search/?q=exploded%20wallpaper&restrict_sr=1)
-- **gvoze32**, which inspired me, and from which I took the graphic design for the other conky's widgets
+- **gvoze32**, who inspired me, and where I took the graphic design for the other conky's widgets
 	- [Reddit Thread](https://www.reddit.com/r/unixporn/comments/e49pgl/oc_mainte_a_simple_and_functional_conky_theme/)
 	- [Github repository](https://github.com/gvoze32/Mainte)
 - **Igor chubin**
