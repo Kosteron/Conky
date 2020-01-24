@@ -30,6 +30,7 @@ sudo pacman -S conky
 
 you may want to install this optionnal package :
  - calendar (required by conkyrc-calendar)
+ - figlet (required by conkyrc-clock)
 
 **2.** Clone this repository
 ```bash
@@ -51,10 +52,10 @@ cd ~/.conky/
 **5.** Move the font to your local font folder :
 ```bash
 sudo mv ~/.conky/fonts/*
-``` 
+```
 
 **6.** You may have to change some parameters like resolution or position to match your actual linux desktop characteristics.
-So edit **conky-rc** file and change this kind of parameter for the position on your screen : 
+So edit **conky-rc** file and change this kind of parameter for the position on your screen :
 ```
 conky.config = {
 ...
@@ -65,6 +66,19 @@ gap_y = 520,
 ```
 
 To automatically run when startup, just add conky-launch.sh to autostart.
+
+## Tweak
+
+### conkyrc-weather
+If you want to change the location of the local weather, please edit the bash script **weather-pull.sh** and change the following line :
+```bash
+curl "http://wttr.in/aix-en-provence?T&1&Q&F&lang=fr" --silent --max-time 3 > /tmp/weather.tmp
+```
+by what you want, for example London : 
+```bash
+curl "http://wttr.in/london?T&1&Q&F" --silent --max-time 3 > /tmp/weather.tmp
+```
+You can find more parameter and option on the wttr.in [Github repository](https://github.com/chubin/wttr.in).
 
 ## Credits
 Many thanks to :
