@@ -49,9 +49,9 @@ cd ~/.conky/
 ./conky-launch.sh
 ```
 
-**5.** Move the font to your local font folder :
+**5.** Move the font to your font folder :
 ```bash
-sudo mv ~/.conky/fonts/*
+sudo mv ~/.conky/fonts/* /usr/share/fonts
 ```
 
 **6.** You may have to change some parameters like resolution or position to match your actual linux desktop characteristics.
