@@ -30,6 +30,7 @@ sudo pacman -S conky
 
 you may want to install this optionnal package :
  - calendar (required by conkyrc-calendar)
+ - mocp (required by conkyrc-mini-moc-player)
 
 **2.** Clone this repository
 ```bash
