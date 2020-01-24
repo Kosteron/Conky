@@ -30,7 +30,6 @@ sudo pacman -S conky
 
 you may want to install this optionnal package :
  - calendar (required by conkyrc-calendar)
- - figlet (required by conkyrc-clock)
 
 **2.** Clone this repository
 ```bash

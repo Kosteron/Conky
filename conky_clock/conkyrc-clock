@@ -1,6 +1,6 @@
 conky.config = {
     background = false,
-    font = 'FuraCode Nerd Font:pixelsize=10',
+    font = 'FuraCode Nerd Font:pixelsize=20',
     use_xft = true,
     xftalpha = 1.0,
     update_interval = 1,
@@ -24,12 +24,14 @@ conky.config = {
     default_shade_color = '#BEC8CB',
     default_outline_color = '#BEC8CB',
     alignment = 'top_left',
-    gap_x = 350,
-    gap_y = 310,
+    gap_x = 10,
+    gap_y = 90,
     use_spacer = 'none',
     uppercase = true,
 };
 
 conky.text = [[
-${offset 1150}${exec tput clear; date +"%H : %M : %S" | figlet}
+${exec date +"%r"}
+────────────────────────
+${exec date +"%A %d %B %G"}
 ]];
