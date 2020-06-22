@@ -36,7 +36,7 @@ For those who want to try this conky's themes, here’s a step by step how to se
 sudo pacman -S conky
 ```
 
-you may want to install optionnal package, please refer to the table :point_right: [here](#detail)
+you may want to install optionnal package, please refer to the table below
 
 **2.** Clone this repository
 ```bash
@@ -74,24 +74,24 @@ gap_y = 520,
 Edit the **conky-launch.sh** and uncommet or comment the lines corresponding to the widgets you don't want
 To automatically run when startup, just add conky-launch.sh to autostart.
 
-## Full detail (#detail)
+## Full detail
 
-|Name|Info|Dependencies|Description|
-|----|----|----|----|
-|**conky_calendar**|| calendar| Simple Calendar |
-|**conky_clock**||:heavy_multiplication_x: | Simple clock |
-|**conky_computer_monitor**||:heavy_multiplication_x: | Show computer metrics |
-|**conky_fortune**|| fortune-mod | Displays fortune cookie on the desktop |
-|**conky_mini_moc_player**|| mocp, ffmpeg | Display information about the current song listened with mocp |
-|**conky_pingbeat**|[here](#conkyrc-pingbeat)|:heavy_multiplication_x: | Simple pingbeat |
-|**conky_weather**|[here](#conkyrc-weather)|:heavy_multiplication_x:| Display a lot of information about weather |
-|**conky_xfce_workspace_indicator**||:heavy_multiplication_x:|Simple workspace indicator|
+|Name|Dependencies|Description|
+|----|----|----|
+|**conky_calendar**| calendar| Simple Calendar |
+|**conky_clock**|:heavy_multiplication_x: | Simple clock |
+|**conky_computer_monitor**|:heavy_multiplication_x: | Show computer metrics |
+|**conky_fortune**| fortune-mod | Displays fortune cookie on the desktop |
+|**conky_mini_moc_player**| mocp, ffmpeg | Display information about the current song listened with mocp |
+|**conky_pingbeat**|:heavy_multiplication_x: | Simple pingbeat |
+|**conky_weather**|:heavy_multiplication_x:| Display a lot of information about weather |
+|**conky_xfce_workspace_indicator**|:heavy_multiplication_x:|Simple workspace indicator|
 
 ## Tweak
 
 The following section details how to modify the widgets to suit your needs.
 
-### conkyrc-weather (#conkyrc-weather)
+### conkyrc-weather
 
 If you want to change the location of the local weather, please edit the bash script **weather-pull.sh** and change the following line :
 ```bash
@@ -103,7 +103,7 @@ curl "http://wttr.in/london?T&1&Q&F" --silent --max-time 3 > /tmp/weather.tmp
 ```
 You can find more parameter and option on the wttr.in [Github repository](https://github.com/chubin/wttr.in).
 
-### conkyrc-pingbeat (#conkyrc-pingbeat)
+### conkyrc-pingbeat
 
 don't forget to change the keyword **HOSTNAME** by the IP address or the domain name you want to monitor.
 
