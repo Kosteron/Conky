@@ -74,7 +74,7 @@ gap_y = 520,
 Edit the **conky-launch.sh** and uncommet or comment the lines corresponding to the widgets you don't want
 To automatically run when startup, just add conky-launch.sh to autostart.
 
-## Full detail {#detail}
+## Full detail (#detail)
 
 |Name|Info|Dependencies|Description|
 |----|----|----|----|
@@ -91,7 +91,7 @@ To automatically run when startup, just add conky-launch.sh to autostart.
 
 The following section details how to modify the widgets to suit your needs.
 
-### conkyrc-weather {#conkyrc-weather}
+### conkyrc-weather (#conkyrc-weather)
 
 If you want to change the location of the local weather, please edit the bash script **weather-pull.sh** and change the following line :
 ```bash
@@ -103,7 +103,7 @@ curl "http://wttr.in/london?T&1&Q&F" --silent --max-time 3 > /tmp/weather.tmp
 ```
 You can find more parameter and option on the wttr.in [Github repository](https://github.com/chubin/wttr.in).
 
-### conkyrc-pingbeat {#conkyrc-pingbeat}
+### conkyrc-pingbeat (#conkyrc-pingbeat)
 
 don't forget to change the keyword **HOSTNAME** by the IP address or the domain name you want to monitor.
 
