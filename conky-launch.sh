@@ -24,3 +24,7 @@ conky -c $HOME/.conky/conky_clock/conkyrc-clock &
 # start moc mini player
 sleep 0.8
 conky -c $HOME/.conky/conky_mini_moc_player/conkyrc-mini-moc-player &
+
+# start pingbeat monitor
+sleep 0.8
+conky -c $HOME/.conky/conky_pingbeat/conkyrc-pingbeat &

@@ -1,4 +1,11 @@
 # Conky
+
+![Conky logo](conky-logotype.png)
+
+Conky is a free, light-weight system monitor for X, that displays any kind of information on your desktop.
+
+You can find more information about conky :point_right: [here](https://github.com/brndnmtthws/conky)
+
 ## Conky Widget
 
 In this new version, all elements have been adjusted for Manjaro Linux XFCE x64 with Lenovo laptop. Match for 1366x768 screen resolution.
@@ -16,7 +23,8 @@ Actually the gadgets can do :
 
 - Show and Monitor computer metric like fan speed, processor use etc... (Use the awesome conky theme Mainte)
 - Show local weather (Use the awesome http://wttr.in/ to show the local weather)
-- Show a little calendar (based on **cal**)
+- Show a little calendar
+- And much more !
 
 ## Installation
 
@@ -28,11 +36,7 @@ For those who want to try this conky's themes, here’s a step by step how to se
 sudo pacman -S conky
 ```
 
-you may want to install this optionnal package :
- - calendar (required by conkyrc-calendar)
- - mocp (required by conkyrc-mini-moc-player)
- - ffmpeg (required by conkyrc-mini-moc-player to fetching the album picture)
- - fortune-mod (required by conkyrc-fortune)
+you may want to install optionnal package, please refer to the table :point_right: [here](#detail)
 
 **2.** Clone this repository
 ```bash
@@ -67,11 +71,28 @@ gap_y = 520,
 };
 ```
 
+Edit the **conky-launch.sh** and uncommet or comment the lines corresponding to the widgets you don't want
 To automatically run when startup, just add conky-launch.sh to autostart.
+
+## Full detail {#detail}
+
+|Name|Info|Dependencies|Description|
+|----|----|----|----|
+|**conky_calendar**|| calendar| Simple Calendar |
+|**conky_clock**||:heavy_multiplication_x: | Simple clock |
+|**conky_computer_monitor**||:heavy_multiplication_x: | Show computer metrics |
+|**conky_fortune**|| fortune-mod | Displays fortune cookie on the desktop |
+|**conky_mini_moc_player**|| mocp, ffmpeg | Display information about the current song listened with mocp |
+|**conky_pingbeat**|[here](#conkyrc-pingbeat)|:heavy_multiplication_x: | Simple pingbeat |
+|**conky_weather**|[here](#conkyrc-weather)|:heavy_multiplication_x:| Display a lot of information about weather |
+|**conky_xfce_workspace_indicator**||:heavy_multiplication_x:|Simple workspace indicator|
 
 ## Tweak
 
-### conkyrc-weather
+The following section details how to modify the widgets to suit your needs.
+
+### conkyrc-weather {#conkyrc-weather}
+
 If you want to change the location of the local weather, please edit the bash script **weather-pull.sh** and change the following line :
 ```bash
 curl "http://wttr.in/aix-en-provence?T&1&Q&F&lang=fr" --silent --max-time 3 > /tmp/weather.tmp
@@ -81,6 +102,15 @@ by what you want, for example London :
 curl "http://wttr.in/london?T&1&Q&F" --silent --max-time 3 > /tmp/weather.tmp
 ```
 You can find more parameter and option on the wttr.in [Github repository](https://github.com/chubin/wttr.in).
+
+### conkyrc-pingbeat {#conkyrc-pingbeat}
+
+don't forget to change the keyword **HOSTNAME** by the IP address or the domain name you want to monitor.
+
+On the file **conkyrc-pingbeat** :
+```bash
+${exec if ! $( ping -c1 HOSTNAME &>/dev/null ) ; then echo "Server Offline - `date`" ; else echo "Server Online - `date`" ; fi }
+```
 
 ## Credits
 Many thanks to :
