@@ -1,5 +1,5 @@
 conky.config = {
-    background = false,
+    background = true,
     font = 'FuraCode Nerd Font:pixelsize=10',
     use_xft = true,
     xftalpha = 1.0,
@@ -24,12 +24,17 @@ conky.config = {
     default_shade_color = '#BEC8CB',
     default_outline_color = '#BEC8CB',
     alignment = 'top_left',
-    gap_x = 680,
-    gap_y = 595,
+    gap_x = 100,
+    gap_y = 100,
     use_spacer = 'none',
-    uppercase = true,
+    uppercase = false,
 };
 
 conky.text = [[
-${offset 1150}${exec ncal}
+─ > RSS ─────────────────────────────────────────────────────────────────
+
+${rss https://www.lemonde.fr/sciences/rss_full.xml 1 item_titles 4}
+
+─────────────────────────────────────────────────────────────────────────
 ]];
+

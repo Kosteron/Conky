@@ -49,7 +49,7 @@ ${alignr}${offset -80}│
 ${alignr}${offset -80}< ${exec lspci | grep VGA | sed 's/00:02.0 VGA compatible controller: //g' | sed 's/ Corporation//g' | sed 's/ Integrated Graphics Controller (primary) (rev 0c)//g'} > GPU ────────────┘
 ${alignr}${offset -150}< ${exec xdpyinfo | awk '/dimensions/{print $2}'} > Res
 ${voffset 10}
-${alignr}${offset -45}< ${exec cat /etc/locale.conf | grep "LANG=" | cut -d"\"" -f2 | sed 's/LANG=//g'} > Locale ────────────────┐
+${alignr}${offset -45}< ${exec cat /etc/default/locale | grep "LANG=" | cut -d"\"" -f2 | sed 's/LANG=//g'} > Locale ────────────────┐
 ${alignr}${offset -45}│
 ${alignr}${offset -45}│
 ${voffset -10}
@@ -73,12 +73,12 @@ ${voffset 15}
 ${alignr}${offset -75}< $memperc% | $mem/$memmax ${color #BEC8CB}${membar 5,50}${color} > RAM ──────────┐
 ${alignr}${offset -75}│
 ${voffset 10}
-${alignr}${offset -75}${addr wlp3s0} : ${wireless_essid wlp3s0} : SSID ────────────┐
-${alignr}${offset -115}UP < ${color #BEC8CB}${upspeedgraph wlp3s0 15,130 BCC3C3 BCC3C3}${color} >${voffset -15}${offset 40}│
-${alignr}${offset -110}${voffset 10}DOWN < ${color #BEC8CB}${downspeedgraph wlp3s0 15,130 BCC3C3 BCC3C3}${color} >${voffset -25}${offset 40}└─
+${alignr}${offset -75}${addr wlp164s0} : ${wireless_essid wlp164s0} : SSID ────────────┐
+${alignr}${offset -115}UP < ${color #BEC8CB}${upspeedgraph wlp164s0 15,130 BCC3C3 BCC3C3}${color} >${voffset -15}${offset 40}│
+${alignr}${offset -110}${voffset 10}DOWN < ${color #BEC8CB}${downspeedgraph wlp164s0 15,130 BCC3C3 BCC3C3}${color} >${voffset -25}${offset 40}└─
 ${voffset 20}
-${alignr}${offset -75}${exec cat /sys/class/power_supply/BAT1/capacity} : Battery ───────────────────┐
-${alignr}${offset -95}< ${exec acpi | grep "Battery 0" | awk '{print $4}'} | ${battery_percent BAT1}% > BAT 1 < ${color #BEC8CB}${battery_bar 5,110 BAT1}${color} >
+${alignr}${offset -75}${exec cat /sys/class/power_supply/BAT0/capacity} : Battery ───────────────────┐
+${alignr}${offset -95}< ${exec acpi | grep "Battery 0" | awk '{print $4}'} | ${battery_percent BAT0}% > BAT 1 < ${color #BEC8CB}${battery_bar 5,110 BAT0}${color} >
 ${voffset 25}
 ${alignr}${offset -60}Hard Drive ─────────────────┐
 ${alignr}${offset -70}< ${fs_used_perc}% > Root < ${color #BEC8CB}${fs_bar 5,120 /}${color} >${offset 10}│

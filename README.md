@@ -78,15 +78,16 @@ To automatically run when startup, just add conky-launch.sh to autostart.
 
 |Name|Dependencies|Description|
 |----|----|----|
-|**conky_calendar**| calendar| Simple Calendar |
-|**conky_clock**|:heavy_multiplication_x: | Simple clock |
-|**conky_computer_monitor**|:heavy_multiplication_x: | Show computer metrics |
-|**conky_fortune**| fortune-mod | Displays fortune cookie on the desktop |
-|**conky_mini_moc_player**| mocp, ffmpeg | Display information about the current song listened with mocp |
-|**conky_pingbeat**|:heavy_multiplication_x: | Simple pingbeat |
-|**conky_weather**|:heavy_multiplication_x:| Display a lot of information about weather |
-|**conky_xfce_workspace_indicator**|:heavy_multiplication_x:|Simple workspace indicator|
-|**conky_altcoin_monitor**|jq & awk|Simple altcoin price indicator|
+| **conky_calendar** | ncal | Simple Calendar |
+| **conky_clock** | :heavy_multiplication_x: | Simple clock |
+| **conky_computer_monitor** | acpi | Show computer metrics |
+| **conky_fortune** | fortune-mod | Displays fortune cookie on the desktop |
+| **conky_mini_moc_player** | mocp, ffmpeg | Display information about the current song listened with mocp |
+| **conky_pingbeat** | :heavy_multiplication_x: | Simple pingbeat |
+| **conky_weather** | :heavy_multiplication_x: | Display a lot of information about weather |
+| **conky_xfce_workspace_indicator** | :heavy_multiplication_x: | Simple workspace indicator |
+| **conky_altcoin_monitor** | jq & awk | Simple altcoin price indicator |
+| **conky_rss_reader** | conky-all | Simple RSS Reader |
 
 ## Tweak
 
@@ -132,6 +133,16 @@ Just add after the **http** parameter **&ids=** the coin id you want to add to t
 ```
 GET /coins/markets?vs_currency=eur&ids=bitcoin%2Cethereum&order=market_cap_desc&per_page=100&page=1&sparkline=false
 ```
+
+### conky-rss-reader
+
+![preview](conky_rss_reader/conkyrc-rss-reader.png)
+
+If you want to change the displayed rss feed, In the file **conky-rss-reader** change this key :
+```bash
+${rss https://www.lemonde.fr/sciences/rss_full.xml 1 item_titles 4}
+```
+More information about this key [here](https://conky.cc/variables#rss)
 
 ## Credits
 Many thanks to :
