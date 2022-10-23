@@ -22,12 +22,12 @@ sleep 0.8
 conky -c $HOME/.conky/conky_clock/conkyrc-clock &
 
 # start conky-rss
-#sleep 0.8
-#conky -c $HOME/.conky/conky_rss_reader/conkyrc-rss-reader &
+sleep 0.8
+conky -c $HOME/.conky/conky_rss_reader/conkyrc-rss-reader &
 
 # start moc mini player
-sleep 0.8
-conky -c $HOME/.conky/conky_mini_moc_player/conkyrc-mini-moc-player &
+#sleep 0.8
+#conky -c $HOME/.conky/conky_mini_moc_player/conkyrc-mini-moc-player &
 
 # start pingbeat monitor
 #sleep 0.8

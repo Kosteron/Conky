@@ -24,8 +24,8 @@ conky.config = {
     default_shade_color = '#BEC8CB',
     default_outline_color = '#BEC8CB',
     alignment = 'top_left',
-    gap_x = 100,
-    gap_y = 100,
+    gap_x = 10,
+    gap_y = 200,
     use_spacer = 'none',
     uppercase = false,
 };
@@ -33,7 +33,7 @@ conky.config = {
 conky.text = [[
 ─ > RSS ─────────────────────────────────────────────────────────────────
 
-${rss https://www.lemonde.fr/sciences/rss_full.xml 1 item_titles 4}
+${rss https://www.lemonde.fr/sciences/rss_full.xml 1 item_titles 25}
 
 ─────────────────────────────────────────────────────────────────────────
 ]];

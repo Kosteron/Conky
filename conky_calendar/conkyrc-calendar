@@ -31,5 +31,5 @@ conky.config = {
 };
 
 conky.text = [[
-${offset 1150}${exec ncal}
+${exec ncal}
 ]];
