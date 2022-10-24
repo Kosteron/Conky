@@ -90,7 +90,7 @@ Check the following tweak column to see how to modify the widgets to suit your n
 | **conky_xfce_workspace_indicator** | :heavy_multiplication_x: | Simple workspace indicator | :heavy_multiplication_x: |
 | **conky_altcoin_monitor** | jq & awk | Simple altcoin price indicator | [doc](docs/conkyrc-altcoin-monitor.md) |
 | **conky_rss_reader** | conky-all | Simple RSS Reader | [doc](docs/conky-rss-reader.md) |
-| **conky_bluetooth_monitor** | bluetoothctl | Simple Bluetooth Monitor | [doc](docs/conky-rss-reader.md) |
+| **conky_bluetooth_monitor** | bluetoothctl | Simple Bluetooth Monitor | [doc](docs/conky-bluetooth-monitor.md) |
 
 ## Credits
 Many thanks to :
