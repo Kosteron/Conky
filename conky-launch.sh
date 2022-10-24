@@ -25,6 +25,10 @@ conky -c $HOME/.conky/conky_clock/conkyrc-clock &
 sleep 0.8
 conky -c $HOME/.conky/conky_rss_reader/conkyrc-rss-reader &
 
+# start conky-bluetooth-monitor
+sleep 0.8
+conky -c $HOME/.conky/conky_bluetooth_monitor/conkyrc-bluetooth-monitor &
+
 # start moc mini player
 #sleep 0.8
 #conky -c $HOME/.conky/conky_mini_moc_player/conkyrc-mini-moc-player &

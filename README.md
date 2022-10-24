@@ -76,73 +76,21 @@ To automatically run when startup, just add conky-launch.sh to autostart.
 
 ## Full detail
 
-|Name|Dependencies|Description|
-|----|----|----|
-| **conky_calendar** | ncal | Simple Calendar |
-| **conky_clock** | :heavy_multiplication_x: | Simple clock |
-| **conky_computer_monitor** | acpi | Show computer metrics |
-| **conky_fortune** | fortune-mod | Displays fortune cookie on the desktop |
-| **conky_mini_moc_player** | mocp, ffmpeg | Display information about the current song listened with mocp |
-| **conky_pingbeat** | :heavy_multiplication_x: | Simple pingbeat |
-| **conky_weather** | :heavy_multiplication_x: | Display a lot of information about weather |
-| **conky_xfce_workspace_indicator** | :heavy_multiplication_x: | Simple workspace indicator |
-| **conky_altcoin_monitor** | jq & awk | Simple altcoin price indicator |
-| **conky_rss_reader** | conky-all | Simple RSS Reader |
+Check the following tweak column to see how to modify the widgets to suit your needs.
 
-## Tweak
-
-The following section details how to modify the widgets to suit your needs.
-
-### conkyrc-weather
-
-If you want to change the location of the local weather, please edit the bash script **weather-pull.sh** and change the following line :
-```bash
-curl "http://wttr.in/aix-en-provence?T&1&Q&F&lang=fr" --silent --max-time 3 > /tmp/weather.tmp
-```
-by what you want, for example London : 
-```bash
-curl "http://wttr.in/london?T&1&Q&F" --silent --max-time 3 > /tmp/weather.tmp
-```
-You can find more parameter and option on the wttr.in [Github repository](https://github.com/chubin/wttr.in).
-
-### conkyrc-pingbeat
-
-don't forget to change the keyword **HOSTNAME** by the IP address or the domain name you want to monitor.
-
-On the file **conkyrc-pingbeat** :
-```bash
-${exec if ! $( ping -c1 HOSTNAME &>/dev/null ) ; then echo "Server Offline - `date`" ; else echo "Server Online - `date`" ; fi }
-```
-
-### conkyrc-altcoin-monitor
-
-If you want to change the displayed currencies, the script uses the [coingecko](https://www.coingecko.com/en/api#explore-api) API to get altcoin information, especially the 'GET /coins/markets' one.
-
-On the file **fetch.sh** :
-```bash
-#/bin/bash
-
-#curl -X GET "https://api.coingecko.com/api/v3/coins/list?include_platform=false" -H  "accept: application/json" > list.json
-
-curl -X GET "https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin%2Cethereum%2Cripple%2Cpolkadot%2Cpax-gold&order=market_cap_desc&per_page=100&page=1&sparkline=false" -H  "accept: application/json" -o currentData.json
-cat currentData.json | jq -r '.[] | [.id,.current_price] | @csv' | awk -v FS="," 'BEGIN{print "Name\t\tCurrent Price";print "────────────────────────"}{printf "%s\t%s€%s",$1,$2,ORS}'
-```
-
-Just add after the **http** parameter **&ids=** the coin id you want to add to the table separated by a **%2C**. The following example show only Bitcoin and Ethereum :
-
-```
-GET /coins/markets?vs_currency=eur&ids=bitcoin%2Cethereum&order=market_cap_desc&per_page=100&page=1&sparkline=false
-```
-
-### conky-rss-reader
-
-![preview](conky_rss_reader/conkyrc-rss-reader.png)
-
-If you want to change the displayed rss feed, In the file **conky-rss-reader** change this key :
-```bash
-${rss https://www.lemonde.fr/sciences/rss_full.xml 1 item_titles 4}
-```
-More information about this key [here](https://conky.cc/variables#rss)
+| Name | Dependencies | Description | Tweak |
+|----|----|----|----|
+| **conky_calendar** | ncal | Simple Calendar | :heavy_multiplication_x: |
+| **conky_clock** | :heavy_multiplication_x: | Simple clock | :heavy_multiplication_x: |
+| **conky_computer_monitor** | acpi | Show computer metrics | :heavy_multiplication_x: |
+| **conky_fortune** | fortune-mod | Displays fortune cookie on the desktop | :heavy_multiplication_x: |
+| **conky_mini_moc_player** | mocp, ffmpeg | Display information about the current song listened with mocp | :heavy_multiplication_x: |
+| **conky_pingbeat** | :heavy_multiplication_x: | Simple pingbeat | [doc](docs/conkyrc-pingbeat.md) |
+| **conky_weather** | :heavy_multiplication_x: | Display a lot of information about weather | [doc](docs/conkyrc-weather.md) |
+| **conky_xfce_workspace_indicator** | :heavy_multiplication_x: | Simple workspace indicator | :heavy_multiplication_x: |
+| **conky_altcoin_monitor** | jq & awk | Simple altcoin price indicator | [doc](docs/conkyrc-altcoin-monitor.md) |
+| **conky_rss_reader** | conky-all | Simple RSS Reader | [doc](docs/conky-rss-reader.md) |
+| **conky_bluetooth_monitor** | bluetoothctl | Simple Bluetooth Monitor | [doc](docs/conky-rss-reader.md) |
 
 ## Credits
 Many thanks to :
