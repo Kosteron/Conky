@@ -1,3 +1,5 @@
+-- Systems metrics
+
 conky.config = {
     background = false,
     font = 'FuraCode Nerd Font:pixelsize=9',

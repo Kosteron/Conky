@@ -1,9 +1,11 @@
+-- Simple heartbeat to monitor a server
+
 conky.config = {
     background = false,
     font = 'FuraCode Nerd Font:pixelsize=10',
     use_xft = true,
     xftalpha = 1.0,
-    update_interval = 1,
+    update_interval = 10,
     total_run_times = 0,
     own_window = true,
     own_window_transparent = true,
@@ -25,12 +27,10 @@ conky.config = {
     default_outline_color = '#BEC8CB',
     alignment = 'top_left',
     gap_x = 10,
-    gap_y = 700,
+    gap_y = 270,
     use_spacer = 'none',
-    uppercase = false,
 };
 
 conky.text = [[
-─ > Paired Bluetooth Device 
-${exec bluetoothctl paired-devices}
+< Pingbeat : ${exec if ! $( ping -c1 HOSTNAME &>/dev/null ) ; then echo "Server Offline - `date`" ; else echo "Server Online - `date`" ; fi } >
 ]];

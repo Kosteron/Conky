@@ -1,5 +1,7 @@
+-- Simple calendar based on ncal
+
 conky.config = {
-    background = true,
+    background = false,
     font = 'FuraCode Nerd Font:pixelsize=10',
     use_xft = true,
     xftalpha = 1.0,
@@ -24,17 +26,12 @@ conky.config = {
     default_shade_color = '#BEC8CB',
     default_outline_color = '#BEC8CB',
     alignment = 'top_left',
-    gap_x = 10,
-    gap_y = 200,
+    gap_x = 680,
+    gap_y = 595,
     use_spacer = 'none',
-    uppercase = false,
+    uppercase = true,
 };
 
 conky.text = [[
-─ > RSS ─────────────────────────────────────────────────────────────────
-
-${rss https://www.lemonde.fr/sciences/rss_full.xml 1 item_titles 25}
-
-─────────────────────────────────────────────────────────────────────────
+${exec ncal}
 ]];
-

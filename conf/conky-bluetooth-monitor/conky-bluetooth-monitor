@@ -1,9 +1,11 @@
+-- Simple bluetooth monitor
+
 conky.config = {
     background = false,
-    font = 'FuraCode Nerd Font:pixelsize=9',
+    font = 'FuraCode Nerd Font:pixelsize=10',
     use_xft = true,
     xftalpha = 1.0,
-    update_interval = 4,
+    update_interval = 1,
     total_run_times = 0,
     own_window = true,
     own_window_transparent = true,
@@ -25,19 +27,12 @@ conky.config = {
     default_outline_color = '#BEC8CB',
     alignment = 'top_left',
     gap_x = 10,
-    gap_y = 320,
+    gap_y = 700,
     use_spacer = 'none',
-    uppercase = true,
-    text_buffer_size = 512,
-    no_buffers = true,
-    cpu_avg_samples = 2,
-    net_avg_samples = 2,
-    use_spacer = 'none',
-    maximum_width = 1024,
-    minimum_height = 640,
-    uppercase = true,
+    uppercase = false,
 };
 
 conky.text = [[
-${offset 1150}${cat /tmp/weather.tmp}
+─ > Paired Bluetooth Device 
+${exec bluetoothctl paired-devices}
 ]];

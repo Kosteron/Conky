@@ -1,10 +1,12 @@
+-- Simple fortune cookie
+
 conky.config = {
     background = false,
-    font = 'FuraCode Nerd Font:pixelsize=10',
+    font = 'FuraCode Nerd Font:pixelsize=12',
     use_xft = true,
     xftalpha = 1.0,
-    update_interval = 1,
-    total_run_times = 0,
+    update_interval = 360,
+    total_run_times = 1000,
     own_window = true,
     own_window_transparent = true,
     own_window_type = 'dock',
@@ -25,15 +27,11 @@ conky.config = {
     default_outline_color = '#BEC8CB',
     alignment = 'top_left',
     gap_x = 10,
-    gap_y = 80,
+    gap_y = 270,
     use_spacer = 'none',
     text_buffer_size = 512,
 };
 
 conky.text = [[
-${offset 60}${exec [ -e "/tmp/$(mocp -Q %song).jpg" ] && ln -sfn "/tmp/$(mocp -Q %song).jpg" "/tmp/alb.jpg" || ffmpeg -y -i "$(mocp -Q %file)" "/tmp/$(mocp -Q %song).jpg" ; ln -sfn "/tmp/$(mocp -Q %song).jpg" "/tmp/alb.jpg"}MOCP player
-${offset 60}${moc_title}
-${offset 60}────────────────────────────────────────────────────
-${offset 60}${moc_curtime} ${moc_timeleft} [ ${moc_totaltime} ]    ${moc_rate}   ${moc_bitrate}
-${voffset -56}${lua_bar 50,50}${image /tmp/alb.jpg -s 50x50}
+${exec fortune}
 ]];

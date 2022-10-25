@@ -6,10 +6,6 @@ Conky is a free, light-weight system monitor for X, that displays any kind of in
 
 You can find more information about conky :point_right: [here](https://github.com/brndnmtthws/conky)
 
-## Conky Widget
-
-In this new version, all elements have been adjusted for Manjaro Linux XFCE x64 with Lenovo laptop. Match for 1366x768 screen resolution.
-
 ## Motivation
 The main reason for this repository is to save in one place and thus be able to share some work on the awesome personalization tool named **conky**
 
@@ -71,7 +67,31 @@ gap_y = 520,
 };
 ```
 
-Edit the **conky-launch.sh** and uncommet or comment the lines corresponding to the widgets you don't want
+## Usage
+
+![Assistant](conky-configure.png)
+
+This relatively simple tool, takes care of part of your work, it allows you to generate a launch script automatically for conky from the configuration files present in the folder **conf**.
+
+```
+bash conky-configure.sh
+```
+
+If you want to add a conky widget managed by this tool, you must create a folder and its associated configuration file with the same name.
+Actually this tool don't support complex conky widget who need multiple bash/python script to operate.
+
+To add a description for your conky widget add a comment on the top of your conky config :
+```
+-- My description
+
+conky.config = {
+    background = false,
+    font = 'Fantasque Sans Mono:size=10',
+	...
+```
+
+If you don't want to manage your **conky-launch.sh** with this tool, instead edit it manually ;)
+Edit the **conky-launch.sh** and uncomment or comment the lines corresponding to the widgets you don't want
 To automatically run when startup, just add conky-launch.sh to autostart.
 
 ## Full detail
@@ -80,17 +100,18 @@ Check the following tweak column to see how to modify the widgets to suit your n
 
 | Name | Dependencies | Description | Tweak |
 |----|----|----|----|
-| **conky_calendar** | ncal | Simple Calendar | :heavy_multiplication_x: |
-| **conky_clock** | :heavy_multiplication_x: | Simple clock | :heavy_multiplication_x: |
-| **conky_computer_monitor** | acpi | Show computer metrics | :heavy_multiplication_x: |
-| **conky_fortune** | fortune-mod | Displays fortune cookie on the desktop | :heavy_multiplication_x: |
-| **conky_mini_moc_player** | mocp, ffmpeg | Display information about the current song listened with mocp | :heavy_multiplication_x: |
-| **conky_pingbeat** | :heavy_multiplication_x: | Simple pingbeat | [doc](docs/conkyrc-pingbeat.md) |
-| **conky_weather** | :heavy_multiplication_x: | Display a lot of information about weather | [doc](docs/conkyrc-weather.md) |
-| **conky_xfce_workspace_indicator** | :heavy_multiplication_x: | Simple workspace indicator | :heavy_multiplication_x: |
-| **conky_altcoin_monitor** | jq & awk | Simple altcoin price indicator | [doc](docs/conkyrc-altcoin-monitor.md) |
-| **conky_rss_reader** | conky-all | Simple RSS Reader | [doc](docs/conky-rss-reader.md) |
-| **conky_bluetooth_monitor** | bluetoothctl | Simple Bluetooth Monitor | [doc](docs/conky-bluetooth-monitor.md) |
+| **conky-calendar** | ncal | Simple Calendar | :heavy_multiplication_x: |
+| **conky-clock** | :heavy_multiplication_x: | Simple clock | :heavy_multiplication_x: |
+| **conky-exploded-view** | acpi | Show computer metrics | :heavy_multiplication_x: |
+| **conky-computer-metrics** | acpi | Show computer metrics | :heavy_multiplication_x: |
+| **conky-fortune** | fortune-mod | Displays fortune cookie on the desktop | :heavy_multiplication_x: |
+| **conky-mini-moc-player** | mocp, ffmpeg | Display information about the current song listened with mocp | :heavy_multiplication_x: |
+| **conky-pingbeat** | :heavy_multiplication_x: | Simple pingbeat | [doc](docs/conkyrc-pingbeat.md) |
+| **conky-weather** | :heavy_multiplication_x: | Display a lot of information about weather | [doc](docs/conkyrc-weather.md) |
+| **conky-xfce-workspace-indicator** | :heavy_multiplication_x: | Simple workspace indicator | :heavy_multiplication_x: |
+| **conky-altcoin-monitor** | jq & awk | Simple altcoin price indicator | [doc](docs/conkyrc-altcoin-monitor.md) |
+| **conky-rss-reader** | conky-all | Simple RSS Reader | [doc](docs/conky-rss-reader.md) |
+| **conky-bluetooth-monitor** | bluetoothctl | Simple Bluetooth Monitor | [doc](docs/conky-bluetooth-monitor.md) |
 
 ## Credits
 Many thanks to :

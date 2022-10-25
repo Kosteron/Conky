@@ -1,3 +1,5 @@
+-- Exploded laptop view, use it with system metrics
+
 conky.config = {
     background = false,
     font = 'Fantasque Sans Mono:size=10',
@@ -36,5 +38,5 @@ conky.config = {
 };
 
 conky.text = [[
-${offset 500}${image ~/.conky/conky_computer_monitor/bg.png -s 280x679}
+${offset 500}${image ~/.conky/conf/conky-exploded-view/bg.png -s 280x679}
 ]];

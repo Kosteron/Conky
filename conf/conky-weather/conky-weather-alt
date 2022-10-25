@@ -1,9 +1,9 @@
 conky.config = {
     background = false,
-    font = 'FuraCode Nerd Font:pixelsize=20',
+    font = 'FuraCode Nerd Font:pixelsize=9',
     use_xft = true,
     xftalpha = 1.0,
-    update_interval = 1,
+    update_interval = 360,
     total_run_times = 0,
     own_window = true,
     own_window_transparent = true,
@@ -25,13 +25,19 @@ conky.config = {
     default_outline_color = '#BEC8CB',
     alignment = 'top_left',
     gap_x = 10,
-    gap_y = 80,
+    gap_y = 320,
     use_spacer = 'none',
+    uppercase = true,
+    text_buffer_size = 512,
+    no_buffers = true,
+    cpu_avg_samples = 2,
+    net_avg_samples = 2,
+    use_spacer = 'none',
+    maximum_width = 1024,
+    minimum_height = 640,
     uppercase = true,
 };
 
 conky.text = [[
-${exec date +"%r"}
-────────────────────────
-${exec date +"%A %d %B %G"}
+${offset 1150}${cat /tmp/weather.tmp}
 ]];

@@ -1,9 +1,11 @@
+-- Conky weather
+
 conky.config = {
     background = false,
     font = 'FuraCode Nerd Font:pixelsize=9',
     use_xft = true,
     xftalpha = 1.0,
-    update_interval = 4,
+    update_interval = 360,
     total_run_times = 0,
     own_window = true,
     own_window_transparent = true,
@@ -30,8 +32,6 @@ conky.config = {
     uppercase = true,
     text_buffer_size = 512,
     no_buffers = true,
-    cpu_avg_samples = 2,
-    net_avg_samples = 2,
     use_spacer = 'none',
     maximum_width = 1024,
     minimum_height = 640,
@@ -39,5 +39,5 @@ conky.config = {
 };
 
 conky.text = [[
-${offset 1150}${cat /tmp/weather.tmp}
+${offset 1150}${curl "http://wttr.in/aix-en-provence?T&1&Q&F&lang=fr" --silent --max-time 3}
 ]];

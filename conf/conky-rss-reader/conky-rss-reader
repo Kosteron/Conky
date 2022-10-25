@@ -1,9 +1,11 @@
+-- Simple and aesthetic RSS reader
+
 conky.config = {
-    background = false,
+    background = true,
     font = 'FuraCode Nerd Font:pixelsize=10',
     use_xft = true,
     xftalpha = 1.0,
-    update_interval = 10,
+    update_interval = 1,
     total_run_times = 0,
     own_window = true,
     own_window_transparent = true,
@@ -25,10 +27,16 @@ conky.config = {
     default_outline_color = '#BEC8CB',
     alignment = 'top_left',
     gap_x = 10,
-    gap_y = 270,
+    gap_y = 200,
     use_spacer = 'none',
+    uppercase = false,
 };
 
 conky.text = [[
-< Pingbeat : ${exec if ! $( ping -c1 HOSTNAME &>/dev/null ) ; then echo "Server Offline - `date`" ; else echo "Server Online - `date`" ; fi } >
+─ > RSS ─────────────────────────────────────────────────────────────────
+
+${rss https://www.lemonde.fr/sciences/rss_full.xml 1 item_titles 25}
+
+─────────────────────────────────────────────────────────────────────────
 ]];
+

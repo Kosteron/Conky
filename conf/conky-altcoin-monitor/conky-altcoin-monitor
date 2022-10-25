@@ -1,3 +1,5 @@
+-- Simple altcoin monitor based on coingecko
+
 conky.config = {
     background = false,
     font = 'FuraCode Nerd Font:pixelsize=10',
@@ -31,5 +33,5 @@ conky.config = {
 };
 
 conky.text = [[
-${exec ./conky_altcoin_monitor/fetch.sh}
+${exec ./conf/conky-altcoin-monitor/fetch.sh}
 ]];

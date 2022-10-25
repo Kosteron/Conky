@@ -1,6 +1,8 @@
+-- Conky workspace viewer
+
 conky.config = {
     background = false,
-    font = 'FuraCode Nerd Font:pixelsize=10',
+    font = 'FuraCode Nerd Font:pixelsize=15',
     use_xft = true,
     xftalpha = 1.0,
     update_interval = 1,
@@ -24,12 +26,11 @@ conky.config = {
     default_shade_color = '#BEC8CB',
     default_outline_color = '#BEC8CB',
     alignment = 'top_left',
-    gap_x = 680,
-    gap_y = 595,
+    gap_x = 10,
+    gap_y = 270,
     use_spacer = 'none',
-    uppercase = true,
 };
 
 conky.text = [[
-${exec ncal}
+< Workspace : ${exec wmctrl -d | grep \* | tr -s " " | cut -d' ' -f11} >
 ]];

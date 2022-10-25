@@ -1,6 +1,8 @@
+-- Simple clock
+
 conky.config = {
     background = false,
-    font = 'FuraCode Nerd Font:pixelsize=15',
+    font = 'FuraCode Nerd Font:pixelsize=20',
     use_xft = true,
     xftalpha = 1.0,
     update_interval = 1,
@@ -25,10 +27,13 @@ conky.config = {
     default_outline_color = '#BEC8CB',
     alignment = 'top_left',
     gap_x = 10,
-    gap_y = 270,
+    gap_y = 80,
     use_spacer = 'none',
+    uppercase = true,
 };
 
 conky.text = [[
-< Workspace : ${exec wmctrl -d | grep \* | tr -s " " | cut -d' ' -f11} >
+${exec date +"%r"}
+────────────────────────
+${exec date +"%A %d %B %G"}
 ]];
