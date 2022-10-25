@@ -98,7 +98,7 @@ function create_luncher {
 	for conf in $confs_to_activate ; do
 		#echo -e "sleep 0.8" >> "$launcher_name"
 		echo -e "# start for ${conf}" >> "$launcher_name"
-		echo -e "conky -c $HOME/.conky/conf/${conf}/${conf} &" >> "$launcher_name"
+		echo -e "conky -c ~/.conky/conf/${conf}/${conf} &" >> "$launcher_name"
 	done
 
 	display_message "Launcher created"
