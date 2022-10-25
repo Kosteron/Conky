@@ -91,7 +91,9 @@ conky.config = {
 ```
 
 If you don't want to manage your **conky-launch.sh** with this tool, instead edit it manually ;)
+
 Edit the **conky-launch.sh** and uncomment or comment the lines corresponding to the widgets you don't want
+
 To automatically run when startup, just add conky-launch.sh to autostart.
 
 ## Full detail
